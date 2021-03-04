@@ -2,7 +2,7 @@
     <div class="home">
         <NavBar
             topics="[
-                { title: '首页', link: 'home' }
+                {title: '首页', link: '/'}
             ]"
             currentNav="1"
         ></NavBar>

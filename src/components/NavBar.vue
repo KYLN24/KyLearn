@@ -19,10 +19,11 @@
 </template>
 
 <script>
+
 export default {
     name: "NavBar",
     props: {
-        topics: [{ title: String, link: String }],
+        topics: [],
         currentNav: Number,
         about: Boolean(false)
     }
@@ -30,13 +31,13 @@ export default {
 </script>
 
 <style scoped>
-nav.topnav {
+.topnav {
     height: 2em;
     background-color: grey;
     overflow: hidden;
 }
 
-nav.topnav router-link {
+.topnav a {
     height: 2em;
     padding: 0.25em 0.25em 0 0.25em;
     display: block;
@@ -46,19 +47,19 @@ nav.topnav router-link {
     text-decoration: none;
 }
 
-nav.topnav router-link:last-child {
+.topnav a:last-child {
     border-right: 0;
 }
 
-nav.topnav router-link.currentNav {
+.topnav a.currentNav {
     background-color: steelblue;
 }
 
-nav.topnav router-link:hover {
+.topnav a:hover {
     background-color: lightsteelblue;
 }
 
-nav.topnav router-link:active {
+.topnav a:active {
     background-color: grey;
 }
 </style>
