@@ -1,22 +1,27 @@
 <template>
     <div class="home">
-        <NavBar
-            topics="[
-                {title: '首页', link: '/'}
-            ]"
-            currentNav="1"
-        ></NavBar>
+        <KyHeader :topics="topics" :currentNav="currentNav" about=true></KyHeader>
+        <router-view />
     </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import NavBar from "@/components/NavBar.vue";
+import KyHeader from "@/components/KyHeader.vue";
 
 export default {
     name: "Home",
+    date() {
+        return {
+            topics: [
+                { title: '首页', link: '/' },
+                { title: '首页', link: '/' }
+            ],
+            currentNav: 1
+        };
+    },
     components: {
-        NavBar
+        KyHeader
     }
 };
 </script>

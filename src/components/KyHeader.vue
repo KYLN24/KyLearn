@@ -1,14 +1,14 @@
 <template>
-    <div class="hello">
+    <div class="ky-header">
         <nav class="topnav">
             <router-link
-                v-for="(item, index) in this.props.topics"
+                v-for="(item, index) in topics"
                 :key="index"
                 to="item.link"
                 >{{ item.title }}</router-link
             >
             <router-link
-                v-if="this.props.about"
+                v-if="about"
                 id="about"
                 style="float: right; border-left: 1px solid rgb(180, 180, 180)"
                 to="/about"
@@ -19,9 +19,8 @@
 </template>
 
 <script>
-
 export default {
-    name: "NavBar",
+    name: "KyHeader",
     props: {
         topics: [],
         currentNav: Number,
