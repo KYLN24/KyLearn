@@ -1,10 +1,11 @@
 <template>
     <div class="ky-header">
+        <h1><a id="bigTitle" href="/">KYLN 的学习路径</a></h1>
         <nav class="topnav">
             <router-link
                 v-for="(item, index) in topics"
                 :key="index"
-                to="item.link"
+                :to="item.link"
                 >{{ item.title }}</router-link
             >
             <router-link
@@ -22,7 +23,7 @@
 export default {
     name: "KyHeader",
     props: {
-        topics: [],
+        topics: Array,
         currentNav: Number,
         about: Boolean(false)
     }
@@ -30,6 +31,11 @@ export default {
 </script>
 
 <style scoped>
+#bigTitle {
+    color: black;
+    text-decoration: none;
+}
+
 .topnav {
     height: 2em;
     background-color: grey;
