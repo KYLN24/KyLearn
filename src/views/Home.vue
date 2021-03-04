@@ -5,7 +5,6 @@
                 { title: '首页', link: 'home' }
             ]"
             currentNav="1"
-            about="true"
         ></NavBar>
     </div>
 </template>

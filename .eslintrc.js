@@ -16,5 +16,6 @@ module.exports = {
     "indent": ["error", 4],
     "quotes": [0, "double"],
     "semi": [1, "always"],
+    "space-before-function-paren": 0
   }
 }

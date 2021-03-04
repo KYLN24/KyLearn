@@ -4,7 +4,7 @@
             <router-link
                 v-for="(item, index) in this.props.topics"
                 :key="index"
-                :to="item.link"
+                to="item.link"
                 >{{ item.title }}</router-link
             >
             <router-link
@@ -20,12 +20,12 @@
 
 <script>
 export default {
-    name: "NavBar"
-    // props: {
-    //     topics: [{ title: String, link: String }],
-    //     currentNav: Number,
-    //     about: Boolean(false)
-    // }
+    name: "NavBar",
+    props: {
+        topics: [{ title: String, link: String }],
+        currentNav: Number,
+        about: Boolean(false)
+    }
 };
 </script>
 
@@ -36,7 +36,7 @@ nav.topnav {
     overflow: hidden;
 }
 
-nav.topnav a {
+nav.topnav router-link {
     height: 2em;
     padding: 0.25em 0.25em 0 0.25em;
     display: block;
@@ -46,19 +46,19 @@ nav.topnav a {
     text-decoration: none;
 }
 
-nav.topnav a:last-child {
+nav.topnav router-link:last-child {
     border-right: 0;
 }
 
-nav.topnav a.currentNav {
+nav.topnav router-link.currentNav {
     background-color: steelblue;
 }
 
-nav.topnav a:hover {
+nav.topnav router-link:hover {
     background-color: lightsteelblue;
 }
 
-nav.topnav a:active {
+nav.topnav router-link:active {
     background-color: grey;
 }
 </style>
